@@ -37,9 +37,11 @@ app.post("/", function (req, res) {
 
   const url = "https://us10.api.mailchimp.com/3.0/lists/baaa4a0d79";
 
+  const api_key = "_";
+
   const options = {
     method: "POST",
-    auth: "vinayakkgarg:725c46aab75595ea8be59f8b1def8b8b-us10",
+    auth: "vinayakkgarg:" + api_key,
   };
 
   const request = https.request(url, options, function (response) {
@@ -65,8 +67,3 @@ app.post("/failure", function (req, res) {
 app.listen(process.env.PORT || 3000, function () {
   console.log("server started on port 3000");
 });
-
-// API KEY
-// 725c46aab75595ea8be59f8b1def8b8b-us10
-
-// list ID
